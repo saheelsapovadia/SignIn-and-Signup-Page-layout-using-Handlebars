@@ -1,0 +1,44 @@
+<header>
+  <div class="name" href="/">&lt;/&gt; Pasteez</div>
+  <nav>
+    <ul class="navlinks">
+      <li><a href="/signup">Sign Up</a></li>
+      <li><a href="/login">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="form-container">
+    <div class="form-title">Sign up</div>
+    <form action="/signup" method="post" class="form">
+      <label for="username">username</label><br />
+      <input type="text" name="username" required /><br />
+
+      <label for="email">email</label><br />
+      <input
+        type="text"
+        name="email"
+        pattern="[^ @]*@[^ @]*"
+        required
+        oninvalid="setCustomValidity('Please enter valid Email.')"
+        onchange="try{setCustomValidity('')}catch(e){}"
+      /><br />
+
+      <label for="password">password</label><br />
+      <input type="password" name="password" required /><br />
+
+      <label for="password-confirm">confirm password</label><br />
+      <input type="text" name="password-confirm" required /><br />
+
+      <div id="form-button">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<footer>
+  <div class="footer-container">
+    <div class="footer-content">made by team <b>RamenCoders</b></div>
+  </div>
+</footer>
